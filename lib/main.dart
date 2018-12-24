@@ -1,5 +1,11 @@
+/*
+ * Created Just for fun
+ * This one is incomplete so maybe I'll complete this (nearly in a decade)
+ * If you found any issue please submit pr instead of issue :P
+ * This code could be optimized (not sure) never worked or studied flutter
+ * just went through documentation whenever stuck. Optimize it if possible
+ */
 import 'dart:ui';
-
 import 'package:flutter/material.dart';
 
 void main() => runApp(MyApp());
@@ -36,7 +42,6 @@ class _MyHomePageState extends State<MyHomePage> with TickerProviderStateMixin {
   ];
   AnimationController _animationController, _animationBackgroundController;
   CurvedAnimation _tapController, _backgroundController;
-  Animation _searchAnimation;
   int _activeIndex;
   int _oldActiveIndex;
 
@@ -77,10 +82,6 @@ class _MyHomePageState extends State<MyHomePage> with TickerProviderStateMixin {
 
   @override
   Widget build(BuildContext context) {
-    _searchAnimation =
-        Tween(begin: 50.0, end: MediaQuery.of(context).size.width)
-            .animate(_animationController);
-
     return Scaffold(
       body: Stack(
         fit: StackFit.expand,
@@ -111,7 +112,6 @@ class _MyHomePageState extends State<MyHomePage> with TickerProviderStateMixin {
                   ),
                   Expanded(
                     child: GestureDetector(
-//                      onLongPress: _startAnimation,
                       behavior: HitTestBehavior.opaque,
                       child: Stack(
                         fit: StackFit.expand,
@@ -329,3 +329,9 @@ class _MyHomePageState extends State<MyHomePage> with TickerProviderStateMixin {
     );
   }
 }
+
+/*
+ * Went through entire code??
+ * Here is a potato for you
+ * https://www.youtube.com/watch?v=q7uyKYeGPdE
+ */
